@@ -17,3 +17,8 @@ spec:
   syncPolicy:
     syncOptions:
     - ServerSideApply=true
+  ignoreDifferences:
+  - group: ""
+    kind: Service
+    jsonPointers:
+    - /status/loadBalancer/ingress/0/ipMode
